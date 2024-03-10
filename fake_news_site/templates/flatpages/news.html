@@ -1,0 +1,51 @@
+{% extends 'default.html' %}
+{% load static %}
+{% load censor_filter %}
+{% load custom_tags %}
+
+{% block overarching %}
+
+{% block for_news_page %}
+
+    {% block filter_form %}
+
+    {% endblock %}
+
+<ul>
+{% for x in app_response %}
+<li>
+    <strong>{{ x.title|censor }}</strong> (<em>{{ x.return_date }} </em>) :  {{ x.preview_20|censor }}
+    <a href = "{{ x.get_absolute_url }}"> Read more </a>
+</li>
+{% endfor %}
+{% block title %}
+{% endblock %}
+</ul>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?{% url_replace page=1 %}">« first</a>
+            <a href="?{% url_replace page=page_obj.previous_page_number %}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            {% if page_obj.paginator.num_pages > 1 %}
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            {% endif %}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?{% url_replace page=page_obj.next_page_number %}"> next</a>
+            <a href="?{% url_replace page=page_obj.paginator.num_pages %}"> last »</a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock %}
+{% endblock %}
+
+
+
+
+

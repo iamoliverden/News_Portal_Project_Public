@@ -1,0 +1,15 @@
+{% extends 'default.html' %}
+{% block optional_content %} {% endblock %}
+
+{% block for_post_creation %}
+    <h1>Log In For Fake News </h1>
+<br>
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="{{ next }}">
+</form>
+{% endblock %}
+
+```

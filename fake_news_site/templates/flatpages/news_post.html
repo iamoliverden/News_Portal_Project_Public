@@ -1,0 +1,19 @@
+{% extends 'news.html' %}
+{% load static %}
+{% load censor_filter %}
+
+{% block filter_form %} {% endblock %}
+{% block optional_content %} {% endblock %}
+
+<div class="container-fluid">
+
+{% block title %}
+    <h1> {{ post.title|censor }} </h1>
+    <p>
+        <em> {{post.author.a_user}} (rating: {{post.author.a_rating}}) </em> <br>
+        <em> {{ post.return_date }}, {{post.rating_post}} likes </em>
+    </p>
+    <p> {{ post.content|censor}} </p>
+{% endblock %}
+</div>
+

@@ -1,0 +1,13 @@
+{% extends 'default.html' %}
+{% block optional_content %} {% endblock %}
+
+{% block for_post_creation %}
+    <h1>Create A Fake Article Post</h1>
+<br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="Create Post"/>
+    </form>
+{% endblock %}
