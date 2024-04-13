@@ -1,22 +1,18 @@
 from django import forms
 from .models import *
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
-from allauth.account.forms import SignupForm
-from django.contrib.auth.models import Group
 
 
 class PostForm(forms.ModelForm):
-    post_category = forms.CharField(max_length=200, required=True, help_text='Enter a category (one word) for the post')
-    post_type = forms.CharField(max_length=16, required=True, help_text='Enter "A" for an article or "N" for news')
 
     class Meta:
         model = Post
-        fields = ['author', 'title', 'content']
+        fields = ['author', 'title', 'content', 'post_category', 'post_type']
 
     def __init__(self, *args, **kwargs):
         super(PostForm, self).__init__(*args, **kwargs)
         self.fields['author'].widget = forms.Select(choices=[(o.id, str(o.a_user)) for o in Author.objects.all()])
+        self.fields['post_category'].widget = forms.SelectMultiple(choices=[(o.id, o.name.capitalize()) for o in Category.objects.all()])
+        self.fields['post_type'].widget = forms.Select(choices=[('A', 'Article'), ('N', 'News')])
 
     def clean(self):
         cleaned_data = super().clean()
@@ -55,5 +51,3 @@ class EditForm(forms.ModelForm):
             raise forms.ValidationError('Title must not be empty')
 
         return cleaned_data
-
-

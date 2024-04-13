@@ -1,0 +1,19 @@
+{% extends "account/email/base_message.txt" %}
+{% load account %}
+{% load i18n %}
+
+{% block content %}{% autoescape off %}{% user_display user as user_display %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+You received this message because the user {{ user_display }} used this email to register on the site {{ site_domain }}.
+
+To confirm the registration, please follow the link {{ activate_url }}
+
+If you did not register on the site {{ site_name }}, please ignore this message.
+
+In any case, we recommend that you do not reply to this email.
+
+We also recommend that you do martial arts 4-5 times a week, eat healthy food and drink plenty of water.
+
+Enjoy Life!
+{% endblocktrans %}{% endautoescape %}
+{% endblock %}

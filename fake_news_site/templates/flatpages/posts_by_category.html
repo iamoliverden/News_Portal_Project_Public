@@ -1,0 +1,32 @@
+{% extends 'news.html' %}
+{% load static %}
+{% load censor_filter %}
+
+{% block filter_form %} {% endblock %}
+{% block optional_content %}
+
+{% endblock %}
+
+{% block all_posts_category %}
+<style>
+    .centered-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh; /* Adjust the height as needed */
+    }
+</style>
+
+<div class="centered-text">
+    <h1 class="mt-4">All Posts in Category: <em>{{ category.name|upper }}</em></h1>
+</div>
+    <br>
+{% endblock %}
+
+
+{% block subscribe_button %}
+<div class="d-flex justify-content-center">
+    <a href="{% url 'subscribe_function' category.id %}" class="btn btn-primary me-2">Subscribe to this Category</a>
+    <a href="{% url 'unsubscribe_function' category.id %}" class="btn btn-primary">Unsubscribe from this Category</a>
+</div>
+{% endblock %}

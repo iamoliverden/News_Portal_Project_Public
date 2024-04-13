@@ -11,9 +11,11 @@
     <h1> {{ post.title|censor }} </h1>
     <p>
         <em> {{post.author.a_user}} (rating: {{post.author.a_rating}}) </em> <br>
-        <em> {{ post.return_date }}, {{post.rating_post}} likes </em>
+        <em> {{ post.return_date }}, {{post.rating_post}} likes, categories:  </em>
+        {% for category in post.post_category.all %}
+          <em>  {{ category.name }}</em><em>{% if not forloop.last %},{% endif %}</em>
+        {% endfor %}
     </p>
     <p> {{ post.content|censor}} </p>
 {% endblock %}
 </div>
-

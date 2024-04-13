@@ -7,3 +7,7 @@ venv/
 # ignore .idea folder
 
 .idea/
+
+# ignore my_email_password.py file
+
+fake_news_site/fake_news_site/my_email_password.py
