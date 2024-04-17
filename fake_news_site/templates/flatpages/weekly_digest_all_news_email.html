@@ -1,0 +1,19 @@
+{% load static %}
+{% load censor_filter %}
+{% load custom_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Here is your weekly digest!</title>
+</head>
+<body>
+<h2>Dear Subscriber, we'd like to share with you new posts for the past week.</h2>
+<ul>
+    {% for p in posts %}
+        <li><a href="{{ link }}{{ p.get_absolute_url }}">{{ p.title }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>

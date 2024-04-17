@@ -3,6 +3,7 @@ from django.db import models
 from django.db.models import Sum
 from django.contrib.auth.models import User
 from django.shortcuts import reverse
+from .tasks import send_post_notification
 
 
 # Model Author create
@@ -87,6 +88,15 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('detail_function', kwargs={'id': self.id})
+
+    def save(self, *args, **kwargs):
+        # If it's a new post (i.e., doesn't have an ID yet), send a notification after saving
+        new_post = self.id is None
+
+        super().save(*args, **kwargs)
+
+        if new_post:
+            send_post_notification.delay(self.id)
 
 
 # Model PostCategory

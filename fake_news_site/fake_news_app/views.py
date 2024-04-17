@@ -5,12 +5,9 @@ from .filters import *
 from .forms import *
 from .models import *
 from django.contrib.auth.mixins import *
-from django.contrib.auth.models import *
 from django.views.generic.edit import *
-from django.contrib.auth.decorators import login_required, permission_required
-from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
-from django.db.models import Count
 
 
 class PostListView(ListView):
@@ -101,6 +98,7 @@ def subscribe_function(request, pk):
 
     return render(request, 'subscribe.html', context={'category': _category, 'message': message})
 
+
 @login_required(login_url='/accounts/login/')  # unsubscribe from the category
 def unsubscribe_function(request, pk):
     _user = request.user
@@ -145,3 +143,4 @@ class UserCategoryListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         user = self.request.user
         return Category.objects.filter(subscriber__subscriber=user)
+

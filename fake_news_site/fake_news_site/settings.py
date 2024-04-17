@@ -154,14 +154,15 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 
 ACCOUNT_FORMS = {"signup": "accounts.forms.CustomSignupForm"}
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # for production
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # for development
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # for production
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # for development
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = f'{EmailPassword().my_email}'
 EMAIL_HOST_PASSWORD = f'{EmailPassword().my_password}'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
+EMAIL_TIMEOUT = 60
 
 DEFAULT_FROM_EMAIL = f'{EmailPassword().my_email}'
 
@@ -178,3 +179,12 @@ SITE_URL = 'http://127.0.0.1:8000'
 
 APSCHEDULER_DATETIME_FORMAT = 'N j, Y, f:s a'
 APSCHEDULER_RUN_NOW_TIMEOUT = 25
+
+
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'America/Toronto'
+CELERY_TASK_TIME_LIMIT = 30 * 60
