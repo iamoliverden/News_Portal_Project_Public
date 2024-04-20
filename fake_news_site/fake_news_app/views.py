@@ -8,6 +8,9 @@ from django.contrib.auth.mixins import *
 from django.views.generic.edit import *
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
+from django.views.decorators.cache import cache_page
+from django.core.cache import cache
+
 
 
 class PostListView(ListView):
@@ -35,10 +38,27 @@ class SearchListView(PostListView):
 
 
 # create detail_function
-def detail_function(request, id):
-    news_post = Post.objects.get(id=id)
+@cache_page(60*5)
+def detail_function(request, pk):
+    news_post = Post.objects.get(pk=pk)
     return render(request, 'news_post.html', context={'post': news_post})
 
+
+"""
+class PostDetailView(DetailView):
+    model = Post
+    template_name = 'news_post.html'
+    context_object_name = 'post'
+
+    def get_object(self, *args, **kwargs):
+        obj = cache.get(f'post-{self.kwargs["pk"]}',
+                        None)
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'post-{self.kwargs["pk"]}', obj)
+            return obj
+
+"""
 
 class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Post

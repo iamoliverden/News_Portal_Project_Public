@@ -2,6 +2,7 @@
 {% load static %}
 {% load censor_filter %}
 
+
 {% block filter_form %} {% endblock %}
 {% block optional_content %} {% endblock %}
 
@@ -18,4 +19,5 @@
     </p>
     <p> {{ post.content|censor}} </p>
 {% endblock %}
+
 </div>

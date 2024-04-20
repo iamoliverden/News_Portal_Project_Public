@@ -4,6 +4,8 @@ from django.db.models import Sum
 from django.contrib.auth.models import User
 from django.shortcuts import reverse
 from .tasks import send_post_notification
+from django.core.cache import cache
+import hashlib
 
 
 # Model Author create
@@ -67,6 +69,9 @@ class Post(models.Model):
     content = models.TextField()  # article/news text
     rating_post = models.IntegerField(default=0)  # article/news rating
 
+    def __str__(self):
+        return f'{self.title} by {self.author.a_user}'
+
     def like(self):  # method that increases the rating by one
         self.rating_post += 1
         self.save()
@@ -87,8 +92,26 @@ class Post(models.Model):
         return self.created_at.strftime("%d.%m.%Y")
 
     def get_absolute_url(self):
-        return reverse('detail_function', kwargs={'id': self.id})
+        return reverse('detail_function', kwargs={'pk': self.id})
 
+    def save(self, *args, **kwargs):
+        # If it's a new post (i.e., doesn't have an ID yet), send a notification after saving
+
+        new_post = self.id is None
+
+        super().save(*args, **kwargs)  # Call the "real" save() method
+
+        cache.delete(f'post-{self.id}')
+
+        if new_post:
+            send_post_notification.delay(self.id)
+
+    def delete(self, *args, **kwargs):
+        cache.delete(f'post-{self.id}')  # Delete the cache for this post
+
+        super().delete(*args, **kwargs)  # Call the "real" delete() method
+
+"""
     def save(self, *args, **kwargs):
         # If it's a new post (i.e., doesn't have an ID yet), send a notification after saving
         new_post = self.id is None
@@ -97,6 +120,7 @@ class Post(models.Model):
 
         if new_post:
             send_post_notification.delay(self.id)
+"""
 
 
 # Model PostCategory
