@@ -10,6 +10,8 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
 from django.views.decorators.cache import cache_page
 from django.core.cache import cache
+from django.http import HttpResponse
+import logging
 
 
 
@@ -164,3 +166,17 @@ class UserCategoryListView(LoginRequiredMixin, ListView):
         user = self.request.user
         return Category.objects.filter(subscriber__subscriber=user)
 
+# the below code is meant to test the loggers
+
+# Get the loggers
+django_logger = logging.getLogger('django')
+request_logger = logging.getLogger('django.request')
+security_logger = logging.getLogger('django.security')
+
+def test_logging(request):
+    # Generate log messages for each logger
+    django_logger.info('This is an INFO message from django logger')
+    request_logger.error('This is an ERROR message from django.request logger')
+    security_logger.info('This is an INFO message from django.security logger')
+
+    return HttpResponse("Log messages generated.")
