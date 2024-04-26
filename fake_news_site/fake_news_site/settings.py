@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 from .my_email_password import EmailPassword, SecretKey
 import logging
+from logging.handlers import RotatingFileHandler
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -210,12 +211,34 @@ LOGGING = {
         },
     },
     'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {message}',
+        'simple': {
+            'format': '{levelname} {asctime} {message}',
+            'datetime': '%Y.%m.%d %H:%M:%S',
             'style': '{',
         },
-        'simple': {
-            'format': '{levelname} {message}',
+        'verbose_with_path': {
+            'format': '{levelname} {asctime} {pathname} {message}',
+            'datetime': '%Y.%m.%d %H:%M:%S',
+            'style': '{',
+        },
+        'verbose_with_exc_info': {
+            'format': '{levelname} {asctime} {pathname} {exc_info} {message}',
+            'datetime': '%Y.%m.%d %H:%M:%S',
+            'style': '{',
+        },
+        'verbose_for_general': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'datetime': '%Y.%m.%d %H:%M:%S',
+            'style': '{',
+        },
+        'verbose_for_errors': {
+            'format': '{levelname} {asctime} {pathname} {exc_info} {message}',
+            'datetime': '%Y.%m.%d %H:%M:%S',
+            'style': '{',
+        },
+        'verbose_for_mail': {
+            'format': '{levelname} {asctime} {pathname} {message}',
+            'datetime': '%Y.%m.%d %H:%M:%S',
             'style': '{',
         },
     },
@@ -224,38 +247,53 @@ LOGGING = {
             'level': 'DEBUG',
             'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
+            'formatter': 'simple',
+        },
+        'console_with_path': {
+            'level': 'WARNING', # if it’s set to WARNING, it will handle WARNING, ERROR, and CRITICAL messages
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose_with_path',
+        },
+        'console_with_exc_info': {
+            'level': 'ERROR', # if it is set to ERROR, it will handle ERROR and CRITICAL messages
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose_with_exc_info',
         },
         'file': {
             'level': 'INFO',
             'filters': ['require_debug_false'],
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'project_logs', 'general.log'),
-            'formatter': 'verbose',
+            'formatter': 'verbose_for_general',
         },
         'file_error': {
-            'level': 'ERROR',
+            'level': 'ERROR', #  ERROR и CRITICAL
+            'filters': ['require_debug_true'],
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'project_logs', 'errors.log'),
-            'formatter': 'verbose',
+            'formatter': 'verbose_for_errors',
         },
         'file_security': {
             'level': 'INFO',
+            'filters': ['require_debug_true'],
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'project_logs', 'security.log'),
-            'formatter': 'verbose',
+            'formatter': 'verbose_for_general',
         },
         'mail_admins': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler',
+            'formatter': 'verbose_for_mail',
             'include_html': True,
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['console', 'file'],
-            'level': 'INFO',
+            'handlers': ['console', 'console_with_path', 'console_with_exc_info', 'verbose_for_general', 'file', ],
+            'level': 'DEBUG',
             'propagate': True,
         },
         'django.request': {
@@ -268,10 +306,21 @@ LOGGING = {
             'level': 'INFO',
             'propagate': False,
         },
+        'django.template': {
+            'handlers': ['file_error'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'django.db.backends': {
+            'handlers': ['file_error'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
         'django.server': {
-            'handlers': ['mail_admins'],
+            'handlers': ['mail_admins', 'file_error'],
             'level': 'ERROR',
             'propagate': False,
         },
     },
 }
+
