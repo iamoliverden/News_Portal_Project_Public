@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,48 +6,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>FakeNews.Inc Corporate Website</title>
+        <title>{% trans "FakeNews.Inc Corporate Website" %}</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         {% load static %}
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <style>
+            /* Add this CSS to position the dropdown at the bottom right corner */
+            .language-selector {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+            }
+        </style>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
-
             <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">FakeNews.Inc</div>
+                <div class="sidebar-heading border-bottom bg-light">{% trans "FakeNews.Inc" %}</div>
                 <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% trans "Dashboard" %}</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% trans "Shortcuts" %}</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% trans "Overview" %}</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% trans "Events" %}</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% trans "Profile" %}</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% trans "Status" %}</a>
                 </div>
             </div>
 
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
-
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                     <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <button class="btn btn-primary" id="sidebarToggle">{% trans "Toggle Menu" %}</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="#!">{% trans "Home" %}</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#!">{% trans "Link" %}</a></li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Dropdown" %}</a>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#!">Action</a>
-                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <a class="dropdown-item" href="#!">{% trans "Action" %}</a>
+                                        <a class="dropdown-item" href="#!">{% trans "Another action" %}</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                        <a class="dropdown-item" href="#!">{% trans "Something else here" %}</a>
                                     </div>
                                 </li>
                             </ul>
@@ -56,7 +63,7 @@
 
                 <!-- Page content-->
                 <div class="container-fluid">
-                    {% block optional_content %} <h1 class="mt-4">Today's Hot Fake News Brought to You by Big Pharma </h1> <br> {% endblock %}
+                    {% block optional_content %} <h1 class="mt-4">{% trans "Today's Hot Fake News Brought to You by Big Pharma" %} </h1> <br> {% endblock %}
                     <p> </p>
 
                     {% block all_posts_category %}
@@ -73,6 +80,22 @@
                 </div>
             </div>
         </div>
+
+        <!-- Language Selector Dropdown -->
+        <div class="language-selector">
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.path }}">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                <select name="language" onchange="this.form.submit()">
+                    {% for language in LANGUAGES %}
+                    <option value="{{ language.0 }}" {% if language.0 == LANGUAGE_CODE %} selected {% endif %}>
+                        {{ language.1 }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
     </body>
 </html>
-

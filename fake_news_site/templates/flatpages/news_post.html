@@ -1,4 +1,5 @@
 {% extends 'news.html' %}
+{% load i18n %}
 {% load static %}
 {% load censor_filter %}
 
@@ -11,8 +12,8 @@
 {% block title %}
     <h1> {{ post.title|censor }} </h1>
     <p>
-        <em> {{post.author.a_user}} (rating: {{post.author.a_rating}}) </em> <br>
-        <em> {{ post.return_date }}, {{post.rating_post}} likes, categories:  </em>
+        <em> {{post.author.a_user}} ({% trans "rating" %}: {{post.author.a_rating}}) </em> <br>
+        <em> {{ post.return_date }}, {{post.rating_post}} {% trans "likes" %}, {% trans "categories" %}:  </em>
         {% for category in post.post_category.all %}
           <em>  {{ category.name }}</em><em>{% if not forloop.last %},{% endif %}</em>
         {% endfor %}

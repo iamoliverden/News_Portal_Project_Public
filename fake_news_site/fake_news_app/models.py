@@ -5,7 +5,8 @@ from django.contrib.auth.models import User
 from django.shortcuts import reverse
 from .tasks import send_post_notification
 from django.core.cache import cache
-import hashlib
+from django.utils.translation import gettext as _
+from django.utils.translation import pgettext_lazy
 
 
 # Model Author create

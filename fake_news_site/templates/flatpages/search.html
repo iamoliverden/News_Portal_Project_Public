@@ -1,4 +1,5 @@
 {% extends 'news.html' %}
+{% load i18n %}
 {% load static %}
 {% load censor_filter %}
 {% load custom_tags %}
@@ -6,13 +7,13 @@
 
 {% block overarching %}
 
-{% block optional_content %} <h1 class="mt-4">The Search Results Are Misinformation </h1> <br> {% endblock %}
+{% block optional_content %} <h1 class="mt-4">{% trans "The Search Results Are Misinformation" %} </h1> <br> {% endblock %}
 
     {% block filter_form %}
 
     <form action="" method="get">
        {{ filterset.form.as_p }}
-       <input type="submit" value="Run Filter" />
+       <input type="submit" value="{% trans 'Run Filter' %}" />
     </form>
     <br>
     <br>
@@ -20,3 +21,4 @@
     {% endblock %}
 
 {% endblock %}
+

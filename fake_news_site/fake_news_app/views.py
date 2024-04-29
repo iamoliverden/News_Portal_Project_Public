@@ -40,7 +40,7 @@ class SearchListView(PostListView):
 
 
 # create detail_function
-@cache_page(60*5)
+@cache_page(5)
 def detail_function(request, pk):
     news_post = Post.objects.get(pk=pk)
     return render(request, 'news_post.html', context={'post': news_post})

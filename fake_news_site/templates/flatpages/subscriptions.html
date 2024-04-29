@@ -1,8 +1,10 @@
 {% extends 'default.html' %}
+{% load i18n %}
 {% load static %}
 {% load censor_filter %}
 {% load custom_tags %}
 {% load cache %}
+
 
 {% block overarching %}
 
@@ -15,8 +17,8 @@
 <ul>
 {% for x in categories_list %}
 <li>
-    <strong>{{ x.name }}</strong>: <em>{{ x.post_count }} posts</em>
-    <a href = "{% url 'posts_by_category' category_id=x.id %}"> See posts in this category </a>
+    <strong>{{ x.name }}</strong>: <em>{{ x.post_count }} {% trans "posts" %}</em>
+    <a href = "{% url 'posts_by_category' category_id=x.id %}">{% trans "See posts in this category" %} </a>
 </li>
 {% endfor %}
 {% block title %}
@@ -26,26 +28,23 @@
 <div class="pagination">
     <span class="step-links">
         {% if page_obj.has_previous %}
-            <a href="?{% url_replace page=1 %}">« first</a>
-            <a href="?{% url_replace page=page_obj.previous_page_number %}">previous</a>
+            <a href="?{% url_replace page=1 %}">{% trans "« first" %}</a>
+            <a href="?{% url_replace page=page_obj.previous_page_number %}">{% trans "previous" %}</a>
         {% endif %}
 
         <span class="current">
             {% if page_obj.paginator.num_pages > 1 %}
-                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                {% trans "Page" %} {{ page_obj.number }} {% trans "of" %} {{ page_obj.paginator.num_pages }}
             {% endif %}
         </span>
 
         {% if page_obj.has_next %}
-            <a href="?{% url_replace page=page_obj.next_page_number %}"> next</a>
-            <a href="?{% url_replace page=page_obj.paginator.num_pages %}"> last »</a>
+            <a href="?{% url_replace page=page_obj.next_page_number %}">{% trans "next" %}</a>
+            <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{% trans "last »" %}</a>
         {% endif %}
     </span>
 </div>
 
 {% endblock %}
 {% endblock %}
-
-
-
 

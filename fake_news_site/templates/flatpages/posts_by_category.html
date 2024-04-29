@@ -1,4 +1,5 @@
 {% extends 'news.html' %}
+{% load i18n %}
 {% load static %}
 {% load censor_filter %}
 {% load cache %}
@@ -19,7 +20,7 @@
 </style>
 
 <div class="centered-text">
-    <h1 class="mt-4">All Posts in Category: <em>{{ category.name|upper }}</em></h1>
+    <h1 class="mt-4">{% trans "All Posts in Category" %}: <em>{{ category.name|upper }}</em></h1>
 </div>
     <br>
 {% endblock %}
@@ -27,7 +28,7 @@
 
 {% block subscribe_button %}
 <div class="d-flex justify-content-center">
-    <a href="{% url 'subscribe_function' category.id %}" class="btn btn-primary me-2">Subscribe to this Category</a>
-    <a href="{% url 'unsubscribe_function' category.id %}" class="btn btn-primary">Unsubscribe from this Category</a>
+    <a href="{% url 'subscribe_function' category.id %}" class="btn btn-primary me-2">{% trans "Subscribe to this Category" %}</a>
+    <a href="{% url 'unsubscribe_function' category.id %}" class="btn btn-primary">{% trans "Unsubscribe from this Category" %}</a>
 </div>
 {% endblock %}

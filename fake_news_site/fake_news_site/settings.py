@@ -56,6 +56,7 @@ SITE_ID = 1
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    'django.middleware.locale.LocaleMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -63,6 +64,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'allauth.account.middleware.AccountMiddleware',  # sign up through social media accounts
+
 ]
 
 ROOT_URLCONF = "fake_news_site.urls"
@@ -293,7 +295,7 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['console', 'console_with_path', 'console_with_exc_info', 'file', ],
-            'level': 'DEBUG',
+            'level': 'ERROR', # originally DEBUG, but I changed it to ERROR
             'propagate': True,
         },
         'django.request': {
@@ -324,3 +326,15 @@ LOGGING = {
     },
 }
 
+# localisation
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
+
+# language settings
+
+LANGUAGES = [
+    ('es', 'Español'),
+    ('en', 'English')
+]
