@@ -14,7 +14,6 @@ from django.http import HttpResponse
 import logging
 
 
-
 class PostListView(ListView):
     model = Post
     template_name = 'news.html'
@@ -45,22 +44,6 @@ def detail_function(request, pk):
     news_post = Post.objects.get(pk=pk)
     return render(request, 'news_post.html', context={'post': news_post})
 
-
-"""
-class PostDetailView(DetailView):
-    model = Post
-    template_name = 'news_post.html'
-    context_object_name = 'post'
-
-    def get_object(self, *args, **kwargs):
-        obj = cache.get(f'post-{self.kwargs["pk"]}',
-                        None)
-        if not obj:
-            obj = super().get_object(queryset=self.queryset)
-            cache.set(f'post-{self.kwargs["pk"]}', obj)
-            return obj
-
-"""
 
 class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Post
@@ -165,6 +148,7 @@ class UserCategoryListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         user = self.request.user
         return Category.objects.filter(subscriber__subscriber=user)
+
 
 # the below code is meant to test the loggers
 

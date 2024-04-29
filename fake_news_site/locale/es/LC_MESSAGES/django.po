@@ -266,7 +266,7 @@ msgstr "Ejecutar filtro"
 
 #: .\templates\flatpages\subscribe.html:8
 msgid "{{ message }}"
-msgstr "{{ message }}"
+msgstr ""
 
 #: .\templates\flatpages\weekly_digest_all_news_email.html:10
 #: .\templates\flatpages\weekly_digest_email.html:10

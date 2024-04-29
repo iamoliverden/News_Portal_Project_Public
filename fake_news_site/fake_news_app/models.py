@@ -112,17 +112,6 @@ class Post(models.Model):
 
         super().delete(*args, **kwargs)  # Call the "real" delete() method
 
-"""
-    def save(self, *args, **kwargs):
-        # If it's a new post (i.e., doesn't have an ID yet), send a notification after saving
-        new_post = self.id is None
-
-        super().save(*args, **kwargs)
-
-        if new_post:
-            send_post_notification.delay(self.id)
-"""
-
 
 # Model PostCategory
 class PostCategory(models.Model):
