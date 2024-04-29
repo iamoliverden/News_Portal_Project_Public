@@ -22,8 +22,6 @@ fake_news_site/cache_files/
 
 # ignore project logs
 
-fake_news_site/project_logs/errors.log
-fake_news_site/project_logs/general.log
-fake_news_site/project_logs/security.log
+fake_news_site/project_logs/
 
 
