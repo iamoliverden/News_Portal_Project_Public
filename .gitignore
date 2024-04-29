@@ -15,3 +15,11 @@ fake_news_site/fake_news_site/my_email_password.py
 # ignore my_redis_password.py file
 
 fake_news_site/fake_news_site/my_redis_password.py
+
+# ignore cache folder
+
+fake_news_site/cache_files/
+
+# ignore project logs
+
+fake_news_site/project_logs/
