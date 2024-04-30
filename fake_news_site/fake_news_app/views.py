@@ -9,9 +9,10 @@ from django.views.generic.edit import *
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
 from django.views.decorators.cache import cache_page
-from django.core.cache import cache
+import pytz
+from django.utils import timezone
+from django.shortcuts import redirect
 from django.http import HttpResponse
-import logging
 
 
 class PostListView(ListView):
@@ -150,17 +151,20 @@ class UserCategoryListView(LoginRequiredMixin, ListView):
         return Category.objects.filter(subscriber__subscriber=user)
 
 
-# the below code is meant to test the loggers
+class Index(View):
+    def get(self, request):
+        models = Post.objects.all()
+        tz = request.session.get('django_timezone') or timezone.get_default_timezone_name()
+        request.session['django_timezone'] = tz
 
-# Get the loggers
-django_logger = logging.getLogger('django')
-request_logger = logging.getLogger('django.request')
-security_logger = logging.getLogger('django.security')
+        context = {
+            'models': models,
+            'current_time': timezone.localtime(timezone.now()),
+            'timezones': pytz.common_timezones,
+            'TIME_ZONE': tz,
+        }
+        return render(request, 'timezone_change.html', context)
 
-def test_logging(request):
-    # Generate log messages for each logger
-    django_logger.info('This is an INFO message from django logger')
-    request_logger.error('This is an ERROR message from django.request logger')
-    security_logger.info('This is an INFO message from django.security logger')
-
-    return HttpResponse("Log messages generated.")
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/fake_news_app/posts/')

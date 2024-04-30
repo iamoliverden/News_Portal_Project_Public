@@ -383,3 +383,1379 @@ Traceback (most recent call last):
     raise self.error(
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 8: 'message', expected 'endblock'. Did you forget to register or load this tag?
 ERROR 2024-04-29 13:31:23,655 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/categories/9/subscribe/ HTTP/1.1" 500 178874
+ERROR 2024-04-29 21:45:55,930 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000002400BCF2C40>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+ERROR 2024-04-29 21:45:55,930 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 181793
+ERROR 2024-04-29 21:45:56,863 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000002400BF89A80>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+ERROR 2024-04-29 21:45:56,863 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 181519
+ERROR 2024-04-29 21:48:11,280 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for '' not found. '' is not a valid view function or pattern name."), <traceback object at 0x000002400BCBD900>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+ERROR 2024-04-29 21:48:11,280 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 181340
+ERROR 2024-04-29 21:58:49,315 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000002631B793500>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+ERROR 2024-04-29 21:58:49,322 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 183347
+ERROR 2024-04-29 21:58:50,748 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000002631B676840>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+ERROR 2024-04-29 21:58:50,763 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 183073
+ERROR 2024-04-29 22:23:38,319 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x0000027FB87A1CC0>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+ERROR 2024-04-29 22:23:38,319 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 183536
+ERROR 2024-04-29 22:23:39,136 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x0000027FB87A08C0>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+ERROR 2024-04-29 22:23:39,136 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 183262
+ERROR 2024-04-29 22:25:07,173 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x0000027FB88958C0>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+ERROR 2024-04-29 22:25:07,175 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 183399
+ERROR 2024-04-29 22:27:08,270 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError('timezone requires 2 arguments, 1 provided'), <traceback object at 0x0000027FB8A9C740>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 694, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 756, in args_check
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: timezone requires 2 arguments, 1 provided
+ERROR 2024-04-29 22:27:08,270 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 225051
+ERROR 2024-04-29 22:27:33,423 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError('timezone requires 2 arguments, 1 provided'), <traceback object at 0x0000027FB8850A00>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 694, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 756, in args_check
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: timezone requires 2 arguments, 1 provided
+ERROR 2024-04-29 22:27:33,423 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 224994
+ERROR 2024-04-29 22:34:55,574 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError('timezone requires 2 arguments, 1 provided'), <traceback object at 0x0000022E0746B340>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 694, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 756, in args_check
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: timezone requires 2 arguments, 1 provided
+ERROR 2024-04-29 22:34:55,574 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 225051
+ERROR 2024-04-29 22:45:10,379 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000001656F1306C0>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+ERROR 2024-04-29 22:45:10,380 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 183488
+ERROR 2024-04-29 22:45:10,900 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000001656F11F900>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+ERROR 2024-04-29 22:45:10,900 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 183214
+ERROR 2024-04-29 22:45:49,754 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000001656F883D80>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+ERROR 2024-04-29 22:45:49,756 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 183351
+ERROR 2024-04-29 22:47:34,013 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'Index' not found. 'Index' is not a valid view function or pattern name."), <traceback object at 0x000001656F46A240>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'Index' not found. 'Index' is not a valid view function or pattern name.
+ERROR 2024-04-29 22:47:34,013 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 183183
+ERROR 2024-04-29 23:06:58,666 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("join() argument must be str, bytes, or os.PathLike object, not 'dict'"), <traceback object at 0x000001649B430E40>) Internal Server Error: /fake_news_app/index/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\fake_news_site\fake_news_app\views.py", line 163, in get
+    return render(request, context)  # Change this line
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loaders\base.py", line 17, in get_template
+    for origin in self.get_template_sources(template_name):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loaders\cached.py", line 70, in get_template_sources
+    yield from loader.get_template_sources(template_name)
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loaders\filesystem.py", line 35, in get_template_sources
+    name = safe_join(template_dir, template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\_os.py", line 17, in safe_join
+    final_path = abspath(join(base, *paths))
+                         ^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 147, in join
+  File "<frozen genericpath>", line 152, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'dict'
+ERROR 2024-04-29 23:06:58,669 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/index/ HTTP/1.1" 500 222289
+ERROR 2024-04-30 13:43:15,896 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.template.base.VariableDoesNotExist'>, VariableDoesNotExist('Failed lookup for key [%s] in %r', ('TIME_ZONE', [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x000001719A7FCA10>, 'page_obj': <Page 1 of 4>, 'is_paginated': True, 'object_list': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'app_response': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'view': <fake_news_app.views.PostListView object at 0x000001719A5ED7D0>, 'filterset': <fake_news_app.filters.PostFilter object at 0x000001719A60F590>, 'LANGUAGE_CODE': 'en', 'LANGUAGES': [('en', 'English'), ('es', 'Español')]}])), <traceback object at 0x000001719A6AE700>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 731, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x000001719A7FCA10>, 'page_obj': <Page 1 of 4>, 'is_paginated': True, 'object_list': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'app_response': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'view': <fake_news_app.views.PostListView object at 0x000001719A5ED7D0>, 'filterset': <fake_news_app.filters.PostFilter object at 0x000001719A60F590>, 'LANGUAGE_CODE': 'en', 'LANGUAGES': [('en', 'English'), ('es', 'Español')]}]
+ERROR 2024-04-30 13:43:15,899 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 240380
+ERROR 2024-04-30 13:47:55,615 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.template.base.VariableDoesNotExist'>, VariableDoesNotExist('Failed lookup for key [%s] in %r', ('TIME_ZONE', [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x000001EEA7E82610>, 'page_obj': <Page 1 of 4>, 'is_paginated': True, 'object_list': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'app_response': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'view': <fake_news_app.views.PostListView object at 0x000001EEA7E80210>, 'filterset': <fake_news_app.filters.PostFilter object at 0x000001EEA7E79690>, 'LANGUAGE_CODE': 'en', 'LANGUAGES': [('en', 'English'), ('es', 'Español')]}])), <traceback object at 0x000001EEA7E88780>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 731, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x000001EEA7E82610>, 'page_obj': <Page 1 of 4>, 'is_paginated': True, 'object_list': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'app_response': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'view': <fake_news_app.views.PostListView object at 0x000001EEA7E80210>, 'filterset': <fake_news_app.filters.PostFilter object at 0x000001EEA7E79690>, 'LANGUAGE_CODE': 'en', 'LANGUAGES': [('en', 'English'), ('es', 'Español')]}]
+ERROR 2024-04-30 13:47:55,618 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 240380
+ERROR 2024-04-30 13:47:57,436 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.template.base.VariableDoesNotExist'>, VariableDoesNotExist('Failed lookup for key [%s] in %r', ('TIME_ZONE', [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x000001EEA81F43D0>, 'page_obj': <Page 1 of 4>, 'is_paginated': True, 'object_list': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'app_response': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'view': <fake_news_app.views.PostListView object at 0x000001EEA7F9B710>, 'filterset': <fake_news_app.filters.PostFilter object at 0x000001EEA7F4F7D0>, 'LANGUAGE_CODE': 'en', 'LANGUAGES': [('en', 'English'), ('es', 'Español')]}])), <traceback object at 0x000001EEA81F4800>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 731, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x000001EEA81F43D0>, 'page_obj': <Page 1 of 4>, 'is_paginated': True, 'object_list': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'app_response': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'view': <fake_news_app.views.PostListView object at 0x000001EEA7F9B710>, 'filterset': <fake_news_app.filters.PostFilter object at 0x000001EEA7F4F7D0>, 'LANGUAGE_CODE': 'en', 'LANGUAGES': [('en', 'English'), ('es', 'Español')]}]
+ERROR 2024-04-30 13:47:57,438 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 240380
+ERROR 2024-04-30 13:48:00,663 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.template.base.VariableDoesNotExist'>, VariableDoesNotExist('Failed lookup for key [%s] in %r', ('TIME_ZONE', [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x000001EEA81A20D0>, 'page_obj': <Page 1 of 4>, 'is_paginated': True, 'object_list': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'app_response': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'view': <fake_news_app.views.PostListView object at 0x000001EEA841A9D0>, 'filterset': <fake_news_app.filters.PostFilter object at 0x000001EEA8418950>, 'LANGUAGE_CODE': 'en', 'LANGUAGES': [('en', 'English'), ('es', 'Español')]}])), <traceback object at 0x000001EEA81EF980>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 731, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x000001EEA81A20D0>, 'page_obj': <Page 1 of 4>, 'is_paginated': True, 'object_list': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'app_response': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'view': <fake_news_app.views.PostListView object at 0x000001EEA841A9D0>, 'filterset': <fake_news_app.filters.PostFilter object at 0x000001EEA8418950>, 'LANGUAGE_CODE': 'en', 'LANGUAGES': [('en', 'English'), ('es', 'Español')]}]
+ERROR 2024-04-30 13:48:00,665 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 240380
+ERROR 2024-04-30 13:56:54,822 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\utils\log.py (<class 'django.template.base.VariableDoesNotExist'>, VariableDoesNotExist('Failed lookup for key [%s] in %r', ('TIME_ZONE', [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x000001EEA8430250>, 'page_obj': <Page 1 of 4>, 'is_paginated': True, 'object_list': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'app_response': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'view': <fake_news_app.views.PostListView object at 0x000001EEA81F5190>, 'filterset': <fake_news_app.filters.PostFilter object at 0x000001EEA81F4750>, 'LANGUAGE_CODE': 'en', 'LANGUAGES': [('en', 'English'), ('es', 'Español')]}])), <traceback object at 0x000001EEA8430140>) Internal Server Error: /fake_news_app/posts/
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 731, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x000001EEA8430250>, 'page_obj': <Page 1 of 4>, 'is_paginated': True, 'object_list': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'app_response': <MultilingualQuerySet [<Post: Argentina to Replace Peso with Bitcoin: A Cryptocurrency Coup by PimplePopper1>, <Post: Elon Musk's Extraterrestrial Empanada Enterprise in Argentina by VodkaVegan*>, <Post: A Meeting of Minds: Argentina's President and Elon Musk by Tov.Stalin>, <Post: Elon Musk Reveals Plans to Turn Mars into a Giant Disco Ball by Party.line.flexes>, <Post: Aliens Demand Earth's Supply of Pizza by ComradeCupcakeX01>, <Post: Amazon to Deliver Packages via Dolphins by blm_fever21%>, <Post: Bitcoin Now Backed by Time Travel by Bar.Stool.Liberal>, <Post: Paisa, the New Global Currency by NeverSayNoToPizza>, <Post: Colombia's National Coffee Park Announces Discovery of Gold-Producing Coffee Beans by Burger.Ping>, <Post: Breaking News: Trees to Start Producing Wi-Fi Signals Through Photosynthesis! by Soviet.Sushi_Corazon>]>, 'view': <fake_news_app.views.PostListView object at 0x000001EEA81F5190>, 'filterset': <fake_news_app.filters.PostFilter object at 0x000001EEA81F4750>, 'LANGUAGE_CODE': 'en', 'LANGUAGES': [('en', 'English'), ('es', 'Español')]}]
+ERROR 2024-04-30 13:56:54,824 C:\Users\dried\PycharmProjects\News_Portal_Project_Public\venv\Lib\site-packages\django\core\servers\basehttp.py None "GET /fake_news_app/posts/ HTTP/1.1" 500 240380

@@ -15,5 +15,5 @@ urlpatterns = [
     path('categories/<int:pk>/unsubscribe/', unsubscribe_function, name='unsubscribe_function'),
     path('posts/category/<int:category_id>/', PostListViewByCategory.as_view(), name='posts_by_category'),
     path('subscriptions/', UserCategoryListView.as_view(), name='show_subscriptions_function'),
-    path('test_logging/', test_logging, name='test_logging'),
+    path('index/', Index.as_view(), name='Index'),
 ]

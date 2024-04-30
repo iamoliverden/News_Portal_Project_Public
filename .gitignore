@@ -24,4 +24,6 @@ fake_news_site/cache_files/
 
 fake_news_site/project_logs/
 
+# ignore gettext files
 
+gettext.cmd

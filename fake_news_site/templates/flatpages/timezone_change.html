@@ -1,0 +1,57 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <title>{% trans "Set the Timezone" %}</title>
+   <style>
+                   /* Add this CSS to position the dropdown at the bottom right corner */
+            .language-selector {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+            }
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+         background-color: #f0f0f0;
+         font-size: 2em;
+         font-family: Arial, sans-serif;
+      }
+   </style>
+</head>
+<body>
+        <div>
+            {% trans "The current time-zone is " %}{{ TIME_ZONE }}
+            <form action="{% url 'Index' %}" method="POST">
+                {% csrf_token %}
+                <select name="timezone" onchange="this.form.submit()">
+                    {% for tz in timezones %}
+                    <option value="{{ tz }}" {% if tz == request.session.django_timezone %} selected {% endif %}>
+                        {{ tz }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+        <!-- Language Selector Dropdown -->
+        <div class="language-selector">
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.path }}">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                <select name="language" onchange="this.form.submit()">
+                    {% for language in LANGUAGES %}
+                    <option value="{{ language.0 }}" {% if language.0 == LANGUAGE_CODE %} selected {% endif %}>
+                        {{ language.1 }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+</body>
+</html>

@@ -64,7 +64,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    'allauth.account.middleware.AccountMiddleware',  # sign up through social media accounts
+    'allauth.account.middleware.AccountMiddleware',
+    'fake_news_site.middlewares.TimezoneMiddleware',
 
 ]
 

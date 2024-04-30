@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-27 11:42-0400\n"
+"POT-Creation-Date: 2024-04-30 14:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
 "1 : 2;\n"
+
 #: .\templates\account\email\base_message.txt:3
 #, python-format
 msgid "Hello from %(site_name)s!"
@@ -28,7 +29,8 @@ msgstr "¡Hola desde %(site_name)s!"
 msgid ""
 "Thank you for using %(site_name)s!\n"
 "%(site_domain)s"
-msgstr "¡Gracias por usar %(site_name)s!\n"
+msgstr ""
+"¡Gracias por usar %(site_name)s!\n"
 "%(site_domain)s"
 
 #: .\templates\account\email\email_confirmation_message.txt:6
@@ -51,18 +53,19 @@ msgid ""
 "Enjoy Life!\n"
 msgstr ""
 "\n"
-"Recibiste este mensaje porque el usuario %(user_display)s usó este correo electrónico "
-"para registrarse en el sitio %(site_domain)s.\n"
+"Recibiste este mensaje porque el usuario %(user_display)s usó este correo "
+"electrónico para registrarse en el sitio %(site_domain)s.\n"
 "\n"
 "Para confirmar el registro, por favor sigue el enlace %(activate_url)s\n"
 "\n"
 "Si no te registraste en el sitio %(site_name)s, por favor ignora este "
 "mensaje.\n"
 "\n"
-"En cualquier caso, te recomendamos que no respondas a este correo electrónico.\n"
+"En cualquier caso, te recomendamos que no respondas a este correo "
+"electrónico.\n"
 "\n"
-"También te recomendamos que practiques artes marciales 4-5 veces a la semana, comas alimentos "
-"saludables y bebas mucha agua.\n"
+"También te recomendamos que practiques artes marciales 4-5 veces a la "
+"semana, comas alimentos saludables y bebas mucha agua.\n"
 "\n"
 "¡Disfruta la vida!\n"
 
@@ -128,71 +131,67 @@ msgstr "Crear publicación"
 msgid "Create A Fake News Post"
 msgstr "Crear una publicación de noticias falsas"
 
-#: .\templates\flatpages\default.html:9
+#: .\templates\flatpages\default.html:10
 msgid "FakeNews.Inc Corporate Website"
 msgstr "Sitio Corporativo de FakeNews.Inc"
 
-#: .\templates\flatpages\default.html:21
+#: .\templates\flatpages\default.html:29
 msgid "FakeNews.Inc"
 msgstr "FakeNews.Inc"
 
-#: .\templates\flatpages\default.html:23
+#: .\templates\flatpages\default.html:31
 msgid "Dashboard"
 msgstr "Tablero"
 
-#: .\templates\flatpages\default.html:24
+#: .\templates\flatpages\default.html:32
 msgid "Shortcuts"
 msgstr "Atajos"
 
-#: .\templates\flatpages\default.html:25
+#: .\templates\flatpages\default.html:33
 msgid "Overview"
 msgstr "Resumen"
 
-#: .\templates\flatpages\default.html:26
+#: .\templates\flatpages\default.html:34
 msgid "Events"
 msgstr "Eventos"
 
-#: .\templates\flatpages\default.html:27
+#: .\templates\flatpages\default.html:35
 msgid "Profile"
 msgstr "Perfil"
 
-#: .\templates\flatpages\default.html:28
+#: .\templates\flatpages\default.html:36
 msgid "Status"
 msgstr "Estado"
 
-#: .\templates\flatpages\default.html:38
-msgid "Toggle Menu"
-msgstr "Alternar Menú"
-
-#: .\templates\flatpages\default.html:39
+#: .\templates\flatpages\default.html:45
 msgid "Toggle navigation"
 msgstr "Alternar navegación"
 
-#: .\templates\flatpages\default.html:42
+#: .\templates\flatpages\default.html:48
 msgid "Home"
 msgstr "Inicio"
 
-#: .\templates\flatpages\default.html:43
+#: .\templates\flatpages\default.html:49
 msgid "Link"
 msgstr "Enlace"
 
-#: .\templates\flatpages\default.html:45
+#: .\templates\flatpages\default.html:51
 msgid "Dropdown"
 msgstr "Desplegable"
 
-#: .\templates\flatpages\default.html:47
+#: .\templates\flatpages\default.html:53
 msgid "Action"
 msgstr "Acción"
 
-#: .\templates\flatpages\default.html:48
+#: .\templates\flatpages\default.html:54
 msgid "Another action"
 msgstr "Otra acción"
 
-#: .\templates\flatpages\default.html:50
+#: .\templates\flatpages\default.html:56
 msgid "Something else here"
 msgstr "Algo más aquí"
 
-#: .\templates\flatpages\default.html:60
+#: .\templates\flatpages\default.html:66
 msgid "Today's Hot Fake News Brought to You by Big Pharma"
 msgstr "Las noticias falsas más candentes de hoy presentadas por Big Pharma"
 
@@ -264,9 +263,13 @@ msgstr "Los resultados de la búsqueda son desinformación"
 msgid "Run Filter"
 msgstr "Ejecutar filtro"
 
-#: .\templates\flatpages\subscribe.html:8
-msgid "{{ message }}"
-msgstr ""
+#: .\templates\flatpages\timezone_change.html:6
+msgid "Set the Timezone"
+msgstr "Establecer la zona horaria"
+
+#: .\templates\flatpages\timezone_change.html:28
+msgid "The current time-zone is "
+msgstr "La zona horaria actual es "
 
 #: .\templates\flatpages\weekly_digest_all_news_email.html:10
 #: .\templates\flatpages\weekly_digest_email.html:10
@@ -276,11 +279,17 @@ msgstr "¡Aquí está tu resumen semanal!"
 #: .\templates\flatpages\weekly_digest_all_news_email.html:13
 msgid ""
 "Dear Subscriber, we'd like to share with you new posts for the past week."
-msgstr "Estimado suscriptor, nos gustaría compartir contigo las nuevas publicaciones de la semana pasada."
+msgstr ""
+"Estimado suscriptor, nos gustaría compartir contigo las nuevas publicaciones "
+"de la semana pasada."
 
 #: .\templates\flatpages\weekly_digest_email.html:13
 msgid ""
 "Dear Subscriber, we'd like to share with you new posts for the past week in "
 "your chosen categories."
-msgstr "Estimado suscriptor, nos gustaría compartir contigo las nuevas publicaciones de la semana pasada en "
- "tus categorías elegidas."
+msgstr ""
+"Estimado suscriptor, nos gustaría compartir contigo las nuevas publicaciones "
+"de la semana pasada en tus categorías elegidas."
+
+#~ msgid "Toggle Menu"
+#~ msgstr "Alternar Menú"
