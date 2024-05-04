@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.yandex',
     "django_apscheduler",
+    'rest_framework',
 
 ]
 
@@ -155,13 +156,13 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
-ACCOUNT_CONFIRM_EMAIL_ON_GET = True # direct email confirmation via a link in the email and not through a confirmation page
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True  # direct email confirmation via a link in the email and not through a confirmation page
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 
 ACCOUNT_FORMS = {"signup": "accounts.forms.CustomSignupForm"}
 
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # for production
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # for development
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # for production
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # for development
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = f'{EmailPassword().my_email}'
@@ -186,7 +187,6 @@ SITE_URL = 'http://127.0.0.1:8000'
 APSCHEDULER_DATETIME_FORMAT = 'N j, Y, f:s a'
 APSCHEDULER_RUN_NOW_TIMEOUT = 25
 
-
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
@@ -201,7 +201,6 @@ CACHES = {
         'LOCATION': os.path.join(BASE_DIR, 'cache_files'),
     }
 }
-
 
 LOGGING = {
     'version': 1,
@@ -254,13 +253,13 @@ LOGGING = {
             'formatter': 'simple',
         },
         'console_with_path': {
-            'level': 'WARNING', # if it’s set to WARNING, it will handle WARNING, ERROR, and CRITICAL messages
+            'level': 'WARNING',  # if it’s set to WARNING, it will handle WARNING, ERROR, and CRITICAL messages
             'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
             'formatter': 'verbose_with_path',
         },
         'console_with_exc_info': {
-            'level': 'ERROR', # if it is set to ERROR, it will handle ERROR and CRITICAL messages
+            'level': 'ERROR',  # if it is set to ERROR, it will handle ERROR and CRITICAL messages
             'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
             'formatter': 'verbose_with_exc_info',
@@ -273,7 +272,7 @@ LOGGING = {
             'formatter': 'verbose_for_general',
         },
         'file_error': {
-            'level': 'ERROR', #  ERROR и CRITICAL
+            'level': 'ERROR',  # ERROR и CRITICAL
             'filters': ['require_debug_true'],
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'project_logs', 'errors.log'),
@@ -297,7 +296,7 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['console', 'console_with_path', 'console_with_exc_info', 'file', ],
-            'level': 'ERROR', # originally DEBUG, but I changed it to ERROR
+            'level': 'ERROR',  # originally DEBUG, but I changed it to ERROR
             'propagate': True,
         },
         'django.request': {
