@@ -27,3 +27,7 @@ fake_news_site/project_logs/
 # ignore gettext files
 
 gettext.cmd
+
+# ignore News_Portal_Commands
+
+News_Portal_Commands.pdf
